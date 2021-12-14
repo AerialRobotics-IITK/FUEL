@@ -22,6 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   traj_utils
   active_perception
   cv_bridge
+  trajectory_msgs
 )
 
 
@@ -89,3 +90,8 @@ target_link_libraries( proc_msg2
     ${catkin_LIBRARIES} 
     ${PCL_LIBRARIES}
     )  
+
+add_executable(converter src/convert.cpp)
+target_link_libraries(converter
+      ${catkin_LIBRARIES} 
+          )

@@ -73,7 +73,8 @@
   <exec_depend>bspline_opt</exec_depend>
   <exec_depend>active_perception</exec_depend>
   <exec_depend>traj_utils</exec_depend>
-  
+  <exec_depend>trajectory_msgs</exec_depend>
+
 
 
   <!-- The export tag contains other, unspecified, tags -->

@@ -9,7 +9,8 @@
   <arg name="init_z" value="1.0"/> 
 
   <!-- topic of your odometry such as VIO or LIO -->
-  <arg name="odom_topic" value="/state_ukf/odom" />
+  <!-- <arg name="odom_topic" value="/state_ukf/odom" /> -->
+  <arg name="odom_topic" value="/firefly/odometry_sensor1/odometry" />
 
   <!-- main algorithm params -->
   <include file="$(find exploration_manager)/launch/algorithm.xml">
@@ -64,7 +65,7 @@
     
 
   </node>
-
+ 
   <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
     <remap from="~odom" to="$(arg odom_topic)"/>        
     <remap from="~goal" to="/move_base_simple/goal"/>
@@ -86,5 +87,9 @@
     <arg name="c_num" value="0"/>
     <arg name="p_num" value="130"/>
   </include>
+
+  <node pkg="plan_manage" name="converter" type="converter" output="screen">
+    <remap from="/position_cmd" to="planning/pos_cmd"/> 
+  </node>
 
 </launch>

@@ -7,8 +7,8 @@
 #include <ros/ros.h>
 #include <poly_traj/polynomial_traj.h>
 #include <active_perception/perception_utils.h>
-
 #include <plan_manage/backward.hpp>
+
 namespace backward {
 backward::SignalHandling sh;
 }
