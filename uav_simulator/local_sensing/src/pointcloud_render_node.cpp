@@ -216,7 +216,7 @@ int main(int argc, char** argv)
   GLY_SIZE = (int)(y_size * inv_resolution);
   GLZ_SIZE = (int)(z_size * inv_resolution);
 
-  sensor2body << 0.0, 0.0, 1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0;
+  sensor2body << 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0;
 
   ros::Rate rate(100);
   bool status = ros::ok();
